@@ -5,8 +5,8 @@ public enum CategoriaEvento {
 	ESPORTE(2),
 	SHOW(3),
 	PALESTRA(4),
-	STAND_UP(6),
-	TEATRO(7);
+	STAND_UP(5),
+	TEATRO(6);
 	
 	private int codigo;
 	
@@ -17,5 +17,17 @@ public enum CategoriaEvento {
 	public int getCodigo() {
 		return this.codigo;
 	}
+	
+	public static CategoriaEvento fromCodigo(int x) {
+		switch(x) {
+			case 1: return FESTA;
+			case 2: return ESPORTE;
+			case 3: return SHOW;
+			case 4: return PALESTRA;
+			case 5: return STAND_UP;
+			case 6: return TEATRO;
+		}
+        return null;
+    }
 	
 }
